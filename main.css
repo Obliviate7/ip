@@ -321,3 +321,10 @@ h1{
   bottom: 0px;
   left: 43px;
 }
+@media only screen and (max-width: 600px) {
+  .home-img .navbar {
+    height: 150px;
+    
+}
+
+}
