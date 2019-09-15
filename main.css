@@ -1,6 +1,7 @@
 
 body{
   font-family:  'Josefin Sans', sans-serif;
+  font-size: 15px;
 }
 h1{
   color: #000000;
@@ -112,6 +113,16 @@ h1{
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
+
+/* carousel links */
+.owl-carousel{
+  margin: 10px 0px;
+}
+.owl-theme .owl-controls{
+  display: none!important;
+}
+
+/* Contact */
 .home-contact{
   background-color: #cd6e37;
   color: #ffffff;
@@ -134,6 +145,7 @@ h1{
 .contact-charge{
 
 }
+/* Footer */
 .footer{
   background-color: #333333;
   color: #ffffff;
@@ -149,6 +161,10 @@ h1{
   padding-top: 15px;
 }
 
+#map {
+  height: 300px;  /* The height is 400 pixels */
+  width: 100%;  /* The width is the width of the web page */
+ }
 
 /* Timeline */
 .timeline,
@@ -205,31 +221,26 @@ h1{
   left: 0px;
 }
 .timeline .timeline-item .timeline-badge.primary {
-  background-color: #1f9eba;
+  background-color: #e19323;
 }
 .timeline .timeline-item .timeline-badge.info {
-  background-color: #5bc0de;
+  background-color: #de8023;
 }
 .timeline .timeline-item .timeline-badge.success {
-  background-color: #59ba1f;
+  background-color: #da7e21;
 }
 .timeline .timeline-item .timeline-badge.warning {
-  background-color: #d1bd10;
+  background-color: #d76b20;
 }
 .timeline .timeline-item .timeline-badge.danger {
-  background-color: #ba1f1f;
+  background-color: #d45719;
 }
 .timeline .timeline-item .timeline-panel {
   position: relative;
   width: 46%;
   float: left;
   right: 16px;
-  border: 1px solid #c0c0c0;
-  background: #ffffff;
-  border-radius: 2px;
   padding: 20px;
-  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
 }
 .timeline .timeline-item .timeline-panel:before {
   position: absolute;
@@ -276,7 +287,7 @@ h1{
   height: 35px;
   top: auto;
   bottom: 26px;
-  left: 56px;
+  left: 0px;
   right: 0;
   width: 100%;
   margin-bottom: 20px;
@@ -318,13 +329,24 @@ h1{
 }
 .timeline-horizontal .timeline-item .timeline-badge {
   top: auto;
-  bottom: 0px;
-  left: 43px;
+  bottom: -33px;
+  left: 100px;
 }
+.timeline img{
+  height: 90px;
+  color: #ffffff;
+  margin-top: 25px;
+}
+.timeline-heading{
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
 @media only screen and (max-width: 600px) {
   .home-img .navbar {
     height: 150px;
-    
 }
 
 }
