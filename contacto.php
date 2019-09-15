@@ -13,8 +13,6 @@
     <div class="home-img row">
       <div class="col-md-12">
         <?php include 'components/nav-sec.php'; ?>
-      <p>DESDE EL 2015 acercando a las pymes LAS herramientas<br>de financiación DEL Mercado de Capitales argentino</p>
-      <button type="button" name="button">VER MAS</button>
     </div>
 
     </div>

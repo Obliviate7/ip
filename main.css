@@ -352,7 +352,12 @@ textarea::-webkit-input-placeholder {
     font-size 0.3s ease-in-out,
     visibility 0.3s ease-in-out;
 }
-
+.lineaT{
+  background-color: grey;
+    position: relative;
+    height: 40px;
+    top: 182px;
+}
 input,select {
   font: inherit;
   font-size: 0.8em;
