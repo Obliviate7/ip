@@ -80,74 +80,43 @@
       </div>
     </div>
 
-    <div class="row">
-    <div class="col-md-12">
-      <div style="display:inline-block;width:100%;overflow-y:auto;">
-      <ul class="timeline timeline-horizontal">
-        <li class="timeline-item">
-          <div class="timeline-badge primary"><img src="img/building.svg" alt=""></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">SOCIOS PARTICIPES</h4>
-            </div>
-          </div>
-          <div class="timeline-body">
-            <p>383 Regiones: CABA, provincia de Buenos Aires, Santa Fé y Córdoba, entre otras. Sectores industriales: Agro, Metalurgia, Siderurgia, Comercial, Alimenticia, Textil, entre otros.</p>
-          </div>
-        </li>
+    <div class="row line">
+      <div class="col-md-1"></div>
 
-        <li class="timeline-item">
-          <div class="timeline-badge success"><img src="img/document.svg" alt=""></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Auditor Externo y Asesores Impositivos</h4>
-            </div>
-          </div>
-          <div class="timeline-body">
-            <p>Estudio Crowe</p>
-          </div>
-        </li>
+      <div class="col-md-2">
+        <div class="container-fluid">
+        <h3 class="line-heading">SOCIOS PARTICIPES</h3>
+        <div class="line-badge badge-1"><img src="img/building.svg" alt=""></div>
+        <p class="line-description">383 Regiones: CABA, provincia de Buenos Aires, Santa Fé y Córdoba, entre otras. Sectores industriales: Agro, Metalurgia, Siderurgia, Comercial, Alimenticia, Textil, entre otros.</p>
+        </div>
+      </div>
 
-        <li class="timeline-item">
-          <div class="timeline-badge info"><img src="img/handshake.svg" alt=""></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Clasificación de Riesgo</h4>
-            </div>
-          </div>
-          <div class="timeline-body">
-            <p>A3.ar a escala nacional</p>
-          </div>
-        </li>
+      <div class="col-md-2">
+        <h3 class="line-heading">Auditor Externo y Asesores Impositivos</h3>
+        <div class="line-badge badge-1"><img src="img/building.svg" alt=""></div>
+        <p class="line-description">Estudio Crowe</p>
+      </div>
 
-        <li class="timeline-item">
-          <div class="timeline-badge danger"><img src="img/payment.svg" alt=""></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">garantia</h4>
-            </div>
-          </div>
-          <div class="timeline-body">
-            <p>Preferida “A” BCRA</p>
-          </div>
-        </li>
+      <div class="col-md-2">
+        <h3 class="line-heading">Clasificación de Riesgo</h3>
+        <div class="line-badge badge-1"><img src="img/building.svg" alt=""></div>
+        <p class="line-description">A3.ar a escala nacional</p>
+      </div>
 
-        <li class="timeline-item">
-          <div class="timeline-badge warning"><img src="img/team.svg" alt=""></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Entidad de Garantía Autorizada</h4>
-            </div>
-          </div>
-          <div class="timeline-body">
-            <p>Por CNV para avalar ON Simple</p>
-          </div>
-        </li>
+      <div class="col-md-2">
+        <h3 class="line-heading">Garantia</h3>
+        <div class="line-badge badge-1"><img src="img/building.svg" alt=""></div>
+        <p class="line-description">Preferida “A” BCRA</p>
+      </div>
 
-      </ul>
+      <div class="col-md-2">
+        <h3 class="line-heading">Entidad de Garantía Autorizada</h3>
+        <div class="line-badge badge-1"><img src="img/building.svg" alt=""></div>
+        <p class="line-description">Por CNV para avalar ON Simple</p>
+      </div>
+
+      <div class="col-md-1"></div>
     </div>
-    </div>
-  </div>
 
           <div class="row">
             <div class="container-fluid">
