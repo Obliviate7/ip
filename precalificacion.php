@@ -10,8 +10,17 @@
   include "components/nav.php";
   include 'components/nav-sec.php';
   ?>
+<<<<<<< HEAD:precalificacion.php
     <div class="row subtitle">
       <h2>PRECALIFICACION CREDITICIA</h2>
+=======
+
+    <div class="home-img row">
+      <div class="col-md-12">
+        <?php include 'components/nav-sec.php'; ?>
+    </div>
+
+>>>>>>> 4b66dd38fab5af5fabb79ac7c764aa9dc6cc432c:contacto.php
     </div>
 
     <div class="home-boxes row" style="margin-top:0px;">
