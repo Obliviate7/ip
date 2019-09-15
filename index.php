@@ -50,7 +50,6 @@
     </div>
 
     <div class="row line">
-      <div class="col-md-12 lineaT"></div>
       <div class="col-md-1"></div>
 
       <div class="col-md-2">
