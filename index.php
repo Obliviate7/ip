@@ -31,7 +31,7 @@
         </div>
 
         <div class="home-box col-md-4">
-          <a href="#">
+          <a href="productos.php">
           <h3>Nuestros Productos</h3>
           </a>
           <div class="home-box-2">
@@ -39,7 +39,7 @@
         </div>
 
         <div class="home-box col-md-4">
-          <a href="#">
+          <a href="ventajas.php">
           <h3>Ventajas</h3>
           </a>
           <div class="home-box-3">

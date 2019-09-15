@@ -11,8 +11,8 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">¿Qué es una SGR?</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="#">Ventajas</a></li>
+        <li><a href="productos.php">Productos</a></li>
+        <li><a href="ventajas.php">Ventajas</a></li>
         <li><a href="#">Nosotros</a></li>
         <li><a href="#">Contacto</a></li>
       </ul>

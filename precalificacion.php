@@ -5,18 +5,13 @@
     <title>Integra Pymes SGR</title>
   </head>
   <body>
-
+    <div class="precalificacioncreditica">
   <?php
   include "components/nav.php";
+  include 'components/nav-sec.php';
   ?>
-
-    <div class="home-img row">
-      <div class="col-md-12">
-        <?php include 'components/nav-sec.php'; ?>
-      <p>DESDE EL 2015 acercando a las pymes LAS herramientas<br>de financiación DEL Mercado de Capitales argentino</p>
-      <button type="button" name="button">VER MAS</button>
-    </div>
-
+    <div class="row subtitle">
+      <h2>PRECALIFICACION CREDITICIA</h2>
     </div>
 
     <div class="home-boxes row" style="margin-top:0px;">
@@ -42,7 +37,7 @@
         <input type="number" style="width:100%" name="Cuit" value="" placeholder="Codigo Actividad AFIP:"><br>
         <input type="file" style="width:100%" name="Cuit" value="" placeholder="Adjuntar balance y las ventas posteriores a su cierre:"><br>
         <textarea name="msj" rows="3" cols="80" placeholder="Dejanos tu mensaje y nos comunicaremos a la brevedad..."></textarea>
-        <button type="submit" name="Enviar" value="Enviar" style="float:right;margin-bottom:20px;">Enviar</button>
+        <button type="submit" name="Enviar" value="Enviar" style="float:right;margin-bottom:20px;">ENVIAR</button>
       </div>
       <div class="col-md-1">
 
@@ -50,7 +45,7 @@
     </div>
     </form>
     </div>
-
+</div>
 
 
 
