@@ -2,7 +2,9 @@
 body{
   font-family:  'Josefin Sans', sans-serif;
 }
-
+h1{
+  color: #000000;
+}
 /* Navbar */
 .navbar{
   background-color: #ffffff;
@@ -26,6 +28,9 @@ body{
 }
 .navbar-right li{
   margin-right: 40px;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #000000;
 }
 
 .home-img{
@@ -176,8 +181,8 @@ body{
 }
 .timeline .timeline-item .timeline-badge {
   color: #fff;
-  width: 54px;
-  height: 54px;
+  width: 150px;
+  height: 150px;
   line-height: 52px;
   font-size: 22px;
   text-align: center;
@@ -268,7 +273,7 @@ body{
   display: inline-block;
 }
 .timeline-horizontal:before {
-  height: 3px;
+  height: 35px;
   top: auto;
   bottom: 26px;
   left: 56px;
