@@ -46,7 +46,7 @@ if(isset($_POST['submit'])){
     </div>
 
     <div class="home-boxes row bg-grey">
-    <form class="" action="index.html" method="post">
+    <form class="" action="precalificacion.php" method="post">
     <div class="col-md-12">
 
       <div class="col-md-1"></div>
