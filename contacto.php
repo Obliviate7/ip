@@ -63,7 +63,7 @@ if(isset($_POST['submit'])){
           </div>
 
           <div class="col-md-5">
-            <label for="tipo">Tipo de Necesidad de Financiacion:</label><select style="width:100%"  class="" name="financiacion">
+            <label for="financiacion">Tipo de Necesidad de Financiacion:</label><select style="width:100%"  class="" name="financiacion">
               <option value="null" disabled selected></option>
               <option value="capital_de_trabajo">Capital de Trabajo</option>
               <option value="proyecto_de_inversion">Proyecto de Inversión</option>
