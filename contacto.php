@@ -12,30 +12,30 @@ if(isset($_POST['submit'])){
     $telefono = $_POST['telefono'];
     $msj = $_POST['msj'];
     $subject = "FORMULARIO DE CONTACTO WEB";
-    $message = '
+    $message = echo '
     <html>
     <head>
-      <title><?php $nombre . " " . $apellido . " lleno el formulario"; ?></title>
+      <title>'$nombre . " " . $apellido . 'lleno el formulario</title>
     </head>
     <body>
       <table>
         <tr>
-          <th>Razon Social: </th><th><?php $razonsocial; ?></th>
+          <th>Razon Social: </th><th>'$razonsocial'</th>
         </tr>
         <tr>
-        <th>CUIT: </th><th><?php $cuit; ?></th>
+        <th>CUIT: </th><th>'$cuit'</th>
         </tr>
         <tr>
-          <th>Tipo de Necesidad de Financiacion: </th><th><?php $financiacion; ?></th>
+          <th>Tipo de Necesidad de Financiacion: </th><th>'$financiacion'</th>
         </tr>
         <tr>
-          <th>Email: </th><th><?php $email; ?></th>
+          <th>Email: </th><th>'$email'</th>
         </tr>
         <tr>
-          <th>Prefijo: </th><th><?php $prefijo; ?></th><th>Telefono: </th><th><?php $telefono; ?></th>
+          <th>Prefijo: </th><th>'$prefijo'</th><th>Telefono: </th><th>'$telefono'</th>
         </tr>
         <tr>
-          <th>Mensaje: </th><th><?php $msj; ?></th>
+          <th>Mensaje: </th><th>'$msj'</th>
         </tr>
       </table>
     </body>
