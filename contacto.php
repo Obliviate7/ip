@@ -63,10 +63,10 @@ if(isset($_POST['submit'])){
           </div>
 
           <div class="col-md-5">
-            <label for="tipo">Tipo de Necesidad de Financiacion:</label><select style="width:100%"  class="" name="tipo">
+            <label for="tipo">Tipo de Necesidad de Financiacion:</label><select style="width:100%"  class="" name="financiacion">
               <option value="null" disabled selected></option>
-              <option value="capital">Capital de Trabajo</option>
-              <option value="proyecto">Proyecto de Inversión</option>
+              <option value="capital_de_trabajo">Capital de Trabajo</option>
+              <option value="proyecto_de_inversion">Proyecto de Inversión</option>
             </select><br>
             <label for="email">Email:</label><input style="width:100%" type="email" name="email" value=""><br>
             <div class="col-md-12 contact-nopad">
