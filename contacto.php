@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
     $message = echo '
     <html>
     <head>
-      <title>'$nombre . " " . $apellido . 'lleno el formulario</title>
+      <title>lleno el formulario</title>
     </head>
     <body>
       <table>
