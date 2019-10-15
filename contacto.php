@@ -4,8 +4,43 @@ if(isset($_POST['submit'])){
     $from = $_POST['email']; // this is the sender's Email address
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
-    $subject = "Form submission";
-    $message = $nombre . " " . $apellido . " wrote the following:" . "\n\n" . $_POST['msj'];
+    $razonsocial = $_POST['razonsocial'];
+    $cuit = $_POST['CUIT'];
+    $financiacion = $_POST['financiacion'];
+    $email = $_POST['email'];
+    $prefijo = $_POST['prefijo'];
+    $telefono = $_POST['telefono'];
+    $msj = $_POST['msj'];
+    $subject = "FORMULARIO DE CONTACTO WEB";
+    $message = '
+    <html>
+    <head>
+      <title><?php $nombre . " " . $apellido . " lleno el formulario"; ?></title>
+    </head>
+    <body>
+      <table>
+        <tr>
+          <th>Razon Social: </th><th><?php $razonsocial; ?></th>
+        </tr>
+        <tr>
+        <th>CUIT: </th><th><?php $cuit; ?></th>
+        </tr>
+        <tr>
+          <th>Tipo de Necesidad de Financiacion: </th><th><?php $financiacion; ?></th>
+        </tr>
+        <tr>
+          <th>Email: </th><th><?php $email; ?></th>
+        </tr>
+        <tr>
+          <th>Prefijo: </th><th><?php $prefijo; ?></th><th>Telefono: </th><th><?php $telefono; ?></th>
+        </tr>
+        <tr>
+          <th>Mensaje: </th><th><?php $msj; ?></th>
+        </tr>
+      </table>
+    </body>
+    </html>
+';
 
     $headers = "From:" . $from;
     mail($to,$subject,$message,$headers);
@@ -75,7 +110,6 @@ if(isset($_POST['submit'])){
         </form>
         </div>
       </div>
-
 
 
       <?php
