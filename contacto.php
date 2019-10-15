@@ -12,35 +12,13 @@ if(isset($_POST['submit'])){
     $telefono = $_POST['telefono'];
     $msj = $_POST['msj'];
     $subject = "FORMULARIO DE CONTACTO WEB";
-    $message = echo '
-    <html>
-    <head>
-      <title>lleno el formulario</title>
-    </head>
-    <body>
-      <table>
-        <tr>
-          <th>Razon Social: </th><th>'$razonsocial'</th>
-        </tr>
-        <tr>
-        <th>CUIT: </th><th>'$cuit'</th>
-        </tr>
-        <tr>
-          <th>Tipo de Necesidad de Financiacion: </th><th>'$financiacion'</th>
-        </tr>
-        <tr>
-          <th>Email: </th><th>'$email'</th>
-        </tr>
-        <tr>
-          <th>Prefijo: </th><th>'$prefijo'</th><th>Telefono: </th><th>'$telefono'</th>
-        </tr>
-        <tr>
-          <th>Mensaje: </th><th>'$msj'</th>
-        </tr>
-      </table>
-    </body>
-    </html>
-';
+    $message = $nombre . " " . $apellido . " ha completado el formulario!" . "\n\n" .
+    "Razon Social: " . $razonsocial . "\n\n" .
+    "CUIT: " . $cuit . "\n\n" .
+    "Tipo de Necesidad de Financiacion: " . $financiacion . "\n\n" .
+    "Email: " . $email . "\n\n" .
+    "Prefijo: " . $prefijo . " Telefono: " . $telefono . "\n\n" .
+    "Mensaje: " . $msj ;
 
     $headers = "From:" . $from;
     mail($to,$subject,$message,$headers);
