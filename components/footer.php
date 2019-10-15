@@ -6,7 +6,7 @@
   <p>Av. Cordoba 838 - Piso 5º "9" - C1054AAU - CABA, Argentina.</p>
   </div>
   <div class="col-md-6">
-    <img src="img/datafiscal.jpg" class="datafiscal" alt="Data Fiscal">
+    <a class="twitter" href="https://twitter.com/integrapymessgr"><img src="img/twitter.svg" alt=""></a>
   </div>
   </div>
 </footer>

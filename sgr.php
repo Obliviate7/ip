@@ -31,6 +31,9 @@ responde por las operaciones avaladas; y socios participes, que son las pymes qu
 
       <div class="row bg-grey">
         <h2>¿CÓMO OPERA UNA SGR?</h2>
+        <div class="col-md-12 sgr-img">
+          <img src="img/sgr.png" alt="">
+        </div>
       </div>
 
       </div>

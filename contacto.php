@@ -1,3 +1,19 @@
+<?php
+if(isset($_POST['submit'])){
+    $to = "catalina-delgado@outlook.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $subject = "Form submission";
+    $message = $nombre . " " . $apellido . " wrote the following:" . "\n\n" . $_POST['msj'];
+
+    $headers = "From:" . $from;
+    mail($to,$subject,$message,$headers);
+    echo "Mail Sent. Thank you " . $nombre . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
+
 <!doctype html>
 <html lang="es">
   <head>
@@ -21,15 +37,15 @@
 
       <div class="col-md-12 bg-grey">
         <div class="home-boxes row" style="margin-top:0px;">
-        <form class="" action="index.html" method="post">
+        <form class="" action="contacto.php" method="post">
         <div class="col-md-12 contact-form">
           <div class="col-md-1">
 
           </div>
           <div class="col-md-5">
-            <label for="Nombre">Nombre:</label><input style="width:100%" type="text" name="Nombre" value=""><br>
-            <label for="Apellido">Apellido:</label><input style="width:100%" type="text" name="Apellido" value=""><br>
-            <label for="RazonSocial">RazonSocial:</label><input style="width:100%" type="text" name="RazonSocial" value=""><br>
+            <label for="nombre">Nombre:</label><input style="width:100%" type="text" name="nombre" value=""><br>
+            <label for="apellido">Apellido:</label><input style="width:100%" type="text" name="apellido" value=""><br>
+            <label for="razonsocial">RazonSocial:</label><input style="width:100%" type="text" name="razonsocial" value=""><br>
             <label for="CUIT">CUIT:</label><input type="number" style="width:100%" name="CUIT" value=""><br>
           </div>
 
@@ -39,18 +55,18 @@
               <option value="capital">Capital de Trabajo</option>
               <option value="proyecto">Proyecto de Inversión</option>
             </select><br>
-            <label for="email">Email:</label><input style="width:100%" type="email" name="Email" value=""><br>
+            <label for="email">Email:</label><input style="width:100%" type="email" name="email" value=""><br>
             <div class="col-md-12 contact-nopad">
               <div class="col-md-4 contact-nopad">
-                <label for="pref">Prefijo:</label><input style="width:90%" type="number" name="Prefijo" value="">
+                <label for="prefijo">Prefijo:</label><input style="width:90%" type="number" name="prefijo" value="">
               </div>
               <div class="col-md-8 contact-nopad">
-                <label for="tel">Teléfono:</label><input style="width:100%" type="number" name="Telefono" value=""><br>
+                <label for="telefono">Teléfono:</label><input style="width:100%" type="number" name="telefono" value=""><br>
               </div>
             </div>
 
             <textarea name="msj" rows="2" cols="88" placeholder="Dejanos tu mensaje y nos comunicaremos a la brevedad..."></textarea>
-            <button type="submit" name="Enviar" value="Enviar" style="float:right;margin-bottom:20px;">ENVIAR</button>
+            <button type="submit" name="submit" value="Enviar" style="float:right;margin-bottom:20px;">ENVIAR</button>
           </div>
           <div class="col-md-1">
 
