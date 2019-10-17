@@ -33,6 +33,7 @@
 </html>
 
 <?php
+if($_POST){
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 $link = mysqli_connect("localhost", "root", "root", "ipDB");
@@ -57,5 +58,5 @@ if(mysqli_query($link, $sql)){
 }
 
 // Close connection
-mysqli_close($link);
+mysqli_close($link);}
 ?>
