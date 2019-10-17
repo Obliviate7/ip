@@ -6,7 +6,7 @@ if(isset($_POST['submit'])){
     $apellido = $_POST['apellido'];
     $email = $_POST['email'];
     $telefono = $_POST['telefono'];
-    $cuit = $_POST['CUIT'];
+    $cuit = $_POST['cuit'];
     $actividad = $_POST['actividad'];
     $codigoafip = $_POST['codigoafip'];
     $financiacion = $_POST['financiacion'];

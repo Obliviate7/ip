@@ -39,17 +39,29 @@
         <?php
          if(isset($_POST['submit'])) {
              //Save the values in variable
+             $desde = date("d/m/Y");
+              $badlar = //TRAER DE LA BASE DE DATOS
+             $tasa1 = $badlar * (1 + (3/100));
+             $tasa2 = $badlar * (1 + (6/100));
+              $comision_SGR = //TRAER DE LA BASE DE DATOS
+              $arancel_bolsa = //TRAER DE LA BASE DE DATOS
+              $arancel_mercado = //TRAER DE LA BASE DE DATOS
+             $plazo = $fechadevenc - $desde;
+
              $valordelcheque = $_POST['valordelcheque'];
              $fechadevenc = $_POST['fechadevenc'];
-             $valorneto = 
-             $descuento =
-             $gastos =
-             $comision =
-             //Calculate here
-             $total = $valordelcheque * $fechadevenc;
 
-             /* Now you can use $total either to echo straight in your page,
-            or inside another input field */
+             $findeano = '2019/12/31';
+             $descuento = if ($fechadevenc <= $findeano) {
+                 $valordelcheque * $tasa1 * $plazo / 365;
+               } else if ($fechadevenc > $findeano){
+                 $valordelcheque * $tasa2 * $plazo / 365;
+               }
+             $gastos = (($valordelcheque * $arancel_bolsa * $plazo / 365) + (($valordelcheque - $descuento) * $arancel_mercado)) * 1.21;
+             $comision = ($valordelcheque * $plazo * $comision_SGR);
+             $valorneto = ($valordelcheque - $descuento - $gastos -  $comision / 365) + ($valordelcheque * (2 / 100) * 1.21);
+
+             $cft = ($descuento + $gastos + $comision) / $valordelcheque * 365 / $plazo;
          }
         ?>
 
