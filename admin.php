@@ -6,10 +6,11 @@
 ?>
 <html>
     <head>
-        <title>Admin Page</title>
+        <title>Administrador</title>
     </head>
     <body>
-        This is admin page view able only by logged in users.
+        Esta pagina es solo visible para el administrador.
+        Completar debajo los valores necesarios para el utilizar la calculadora:
       <form action="admin.php" method="post">
           <p>
               <label for="badlar">Badlar:</label>
