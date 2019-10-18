@@ -759,6 +759,11 @@ url('img/skyscrapers.jpg');
 .sgr-img img {
   width: 80%;
 }
+
+#resultadoscalculadora{
+  display: none;
+}
+
 @media only screen and (max-width: 1400px){
 .items-6 .sectorBanner {
     padding: 20px 0;

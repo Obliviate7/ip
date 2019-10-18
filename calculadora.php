@@ -39,40 +39,63 @@
         <?php
 
         include 'dbcon.php';
+
         $sql = "SELECT badlar, comision_SGR, arancel_bolsa, arancel_mercado FROM calculadora ORDER BY ID DESC LIMIT 1";
-        $result = mysqli_query($conn, $sql);
-        $row = mysqli_fetch_assoc($result);
+        $resultado = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_array($resultado);
+
+
 
          if(isset($_POST['submit'])) {
+?>
+           <style type="text/css">#resultadoscalculadora{
+             display:block;
+          }</style>
+          <?php
              //Save the values in variable
-             $desde = date("d/m/Y");
+             $fechadevenc = strtotime($_POST['fechadevenc']);
+             $desde = strtotime(date("d/m/Y"));
               $badlar = $row["badlar"];
              $tasa1 = $badlar * (1 + (3/100));
              $tasa2 = $badlar * (1 + (6/100));
               $comision_SGR = $row["comision_SGR"];
               $arancel_bolsa = $row["arancel_bolsa"];
               $arancel_mercado = $row["arancel_mercado"];
+
              $plazo = $fechadevenc - $desde;
-
              $valordelcheque = $_POST['valordelcheque'];
-             $fechadevenc = $_POST['fechadevenc'];
-
              $findeano = '2019/12/31';
-             // $descuento = if ($fechadevenc <= $findeano) {
-             //     $valordelcheque * $tasa1 * $plazo / 365;
-             //   } else if ($fechadevenc > $findeano){
-             //     $valordelcheque * $tasa2 * $plazo / 365;
-             //   };
+
+             function dto(){
+               global $fechadevenc;
+               global $findeano;
+               global $tasa1;
+               global $valordelcheque;
+               global $plazo;
+               global $tasa2;
+
+               if ($fechadevenc <= $findeano) {
+                   $valordelcheque * $tasa1 * $plazo / 365;
+                 } else if ($fechadevenc > $findeano){
+                   $valordelcheque * $tasa2 * $plazo / 365;
+                 }
+             };
+
+             $descuento = dto();
+
              $gastos = (($valordelcheque * $arancel_bolsa * $plazo / 365) + (($valordelcheque - $descuento) * $arancel_mercado)) * 1.21;
              $comision = ($valordelcheque * $plazo * $comision_SGR);
              $valorneto = ($valordelcheque - $descuento - $gastos -  $comision / 365) + ($valordelcheque * (2 / 100) * 1.21);
 
              $cft = ($descuento + $gastos + $comision) / $valordelcheque * 365 / $plazo;
          }
+
+
+         mysqli_close($conn);
         ?>
 
 
-        <div class="col-md-6">
+        <div class="col-md-6" id="resultadoscalculadora">
           <div class="calculadora-box calc-2">
             <div class="col-md-12">
               <table class="table table-bordered table-striped">
@@ -107,7 +130,7 @@
                 </table>
   						</div>
             </div>
-
+<br>
             <p class="disclosure">No incluye Gastos, Comisiones ni IVA.
             La información contenida en este simulador es de carácter meramente informativo, por lo que no genera obligación de ningún tipo.</p>
           </div>
@@ -117,4 +140,12 @@
 
 
       </div>
+      <?php          if(isset($_POST['submit'])) { ?>
+      <script type="text/javascript">
+      function showhide() {
+        var x = document.getElementById("resultadoscalculadora");
+          x.style.display = "block";
+      }
+      </script>
+    <?php } ?>
 <?php include "components/footer.php" ?>

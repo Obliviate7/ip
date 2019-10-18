@@ -22,10 +22,10 @@ arancel_mercado VARCHAR(30) NOT NULL,
 reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )";
 
-if (mysqli_query($conn, $sql)) {
-    echo "Tabla calculadora creada exitosamente";
-} else {
-    echo "Error creanto la tabla: " . mysqli_error($conn);
-}
-mysqli_close($conn);
+// if (mysqli_query($conn, $sql)) {
+//     echo "Tabla calculadora creada exitosamente";
+// } else {
+//     echo "Error creanto la tabla: " . mysqli_error($conn);
+// }
+
 ?>
