@@ -75,7 +75,7 @@
                global $tasa2;
 
                if ($fechadevenc <= $findeano) {
-                   $valordelcheque * $tasa1 * $plazo / 365;
+                   $valordelcheque * $tasa1 * $plazo) / 365;
                  } else if ($fechadevenc > $findeano){
                    $valordelcheque * $tasa2 * $plazo / 365;
                  }
@@ -85,7 +85,7 @@
 
              $gastos = (($valordelcheque * $arancel_bolsa * $plazo / 365) + (($valordelcheque - $descuento) * $arancel_mercado)) * 1.21;
              $comision = ($valordelcheque * $plazo * $comision_SGR);
-             $valorneto = ($valordelcheque - $descuento - $gastos -  $comision / 365) + ($valordelcheque * (2 / 100) * 1.21);
+             $valorneto = (($valordelcheque - $descuento - $gastos -  $comision )/ 365) + ($valordelcheque * (2 / 100) * 1.21);
 
              $cft = ($descuento + $gastos + $comision) / $valordelcheque * 365 / $plazo;
          }
