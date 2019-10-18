@@ -77,7 +77,7 @@
              $findeano = (strtotime($findeano));
 
 
-             function dto(){..
+             function dto(){
                global $fechadevenc;
                global $findeano;
                global $tasa1;
