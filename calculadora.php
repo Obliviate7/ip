@@ -75,9 +75,9 @@
                global $tasa2;
 
                if ($fechadevenc <= $findeano) {
-                   $valordelcheque * $tasa1 * $plazo) / 365;
+                   return $valordelcheque * $tasa1 * $plazo / 365;
                  } else if ($fechadevenc > $findeano){
-                   $valordelcheque * $tasa2 * $plazo / 365;
+                   return $valordelcheque * $tasa2 * $plazo / 365;
                  }
              };
 
