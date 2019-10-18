@@ -53,17 +53,25 @@
           }</style>
           <?php
              //Save the values in variable
-             $fechadevenc = strtotime($_POST['fechadevenc']);
-             $desde = strtotime(date("d/m/Y"));
-              $badlar = $row["badlar"];
-             $tasa1 = $badlar * (1 + (3/100));
-             $tasa2 = $badlar * (1 + (6/100));
-              $comision_SGR = $row["comision_SGR"];
-              $arancel_bolsa = $row["arancel_bolsa"];
-              $arancel_mercado = $row["arancel_mercado"];
+             $fechadevenc = $_POST['fechadevenc'];
+             $fechadevenc = str_replace('/', '-', $fechadevenc);
+             $fechadevenc = (strtotime($fechadevenc));
 
-             $plazo = $fechadevenc - $desde;
+             $desde = (date("d/m/Y"));
+             $desde = str_replace('/', '-', $desde);
+             $desde = (strtotime($desde));
+
+
+              $badlar = $row["badlar"] / 100;
+             $tasa1 = $badlar +  (3/100);
+             $tasa2 = $badlar +  (6/100);
+              $comision_SGR = $row["comision_SGR"] / 100;
+              $arancel_bolsa = $row["arancel_bolsa"] / 100;
+              $arancel_mercado = $row["arancel_mercado"] / 100;
+
+             $plazo = ($fechadevenc - $desde) / 86400;
              $valordelcheque = $_POST['valordelcheque'];
+             $valordelcheque = (int)$valordelcheque;
              $findeano = '2019/12/31';
 
              function dto(){
@@ -84,13 +92,26 @@
              $descuento = dto();
 
              $gastos = (($valordelcheque * $arancel_bolsa * $plazo / 365) + (($valordelcheque - $descuento) * $arancel_mercado)) * 1.21;
-             $comision = ($valordelcheque * $plazo * $comision_SGR);
-             $valorneto = (($valordelcheque - $descuento - $gastos -  $comision )/ 365) + ($valordelcheque * (2 / 100) * 1.21);
+             $comision = ($valordelcheque * $plazo * $comision_SGR / 365) + ($valordelcheque * (1 + (0.2/100)) * 1.21);
+             $valorneto = ($valordelcheque - $descuento - $gastos -  $comision);
 
              $cft = ($descuento + $gastos + $comision) / $valordelcheque * 365 / $plazo;
          }
 
-
+         var_dump($desde);
+         var_dump($badlar);
+         var_dump($tasa1);
+         var_dump($tasa2);
+         var_dump($comision_SGR);
+         var_dump($arancel_bolsa);
+         var_dump($arancel_mercado);
+         var_dump($plazo);
+         var_dump($valordelcheque);
+         var_dump($fechadevenc);
+         var_dump($descuento);
+         var_dump($comision);
+         var_dump($cft);
+         var_dump($valorneto);
          mysqli_close($conn);
         ?>
 
