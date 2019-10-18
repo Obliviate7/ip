@@ -73,8 +73,11 @@
              $valordelcheque = $_POST['valordelcheque'];
              $valordelcheque = (int)$valordelcheque;
              $findeano = '2019/12/31';
+             $findeano = str_replace('/', '-', $findeano);
+             $findeano = (strtotime($findeano));
 
-             function dto(){
+
+             function dto(){..
                global $fechadevenc;
                global $findeano;
                global $tasa1;
@@ -83,35 +86,28 @@
                global $tasa2;
 
                if ($fechadevenc <= $findeano) {
-                   return $valordelcheque * $tasa1 * $plazo / 365;
+                   return ($valordelcheque * $tasa1 * $plazo / 365) / 10;
                  } else if ($fechadevenc > $findeano){
-                   return $valordelcheque * $tasa2 * $plazo / 365;
+                   return ($valordelcheque * $tasa2 * $plazo / 365) / 10;
                  }
              };
 
              $descuento = dto();
 
-             $gastos = (($valordelcheque * $arancel_bolsa * $plazo / 365) + (($valordelcheque - $descuento) * $arancel_mercado)) * 1.21;
-             $comision = ($valordelcheque * $plazo * $comision_SGR / 365) + ($valordelcheque * (1 + (0.2/100)) * 1.21);
-             $valorneto = ($valordelcheque - $descuento - $gastos -  $comision);
+             $gastos = ((($valordelcheque * $arancel_bolsa * $plazo / 365)/10) + ((($valordelcheque - $descuento * 10)/10) * $arancel_mercado)) * 1.21;
+             $comision = (($valordelcheque * $plazo * $comision_SGR / 365) + ($valordelcheque * 0.002 * 1.21))/10;
+             $valorneto = ((($valordelcheque - $descuento* 10)/10) - $gastos -  $comision);
 
-             $cft = ($descuento + $gastos + $comision) / $valordelcheque * 365 / $plazo;
+             $cft = ((($descuento + $gastos + $comision) / $valordelcheque )*10 * 365 / $plazo)*100;
+
          }
 
-         var_dump($desde);
-         var_dump($badlar);
-         var_dump($tasa1);
-         var_dump($tasa2);
-         var_dump($comision_SGR);
-         var_dump($arancel_bolsa);
-         var_dump($arancel_mercado);
-         var_dump($plazo);
-         var_dump($valordelcheque);
-         var_dump($fechadevenc);
-         var_dump($descuento);
-         var_dump($comision);
-         var_dump($cft);
-         var_dump($valorneto);
+         $descuento = number_format((float)$descuento, 2, '.', '');
+         $gastos = number_format((float)$gastos, 2, '.', '');
+         $comision = number_format((float)$comision, 2, '.', '');
+         $valorneto = number_format((float)$valorneto, 2, '.', '');
+         $cft = number_format((float)$cft, 2, '.', '');
+
          mysqli_close($conn);
         ?>
 
@@ -145,7 +141,7 @@
     								</tr>
   									<tr>
   									<td>CFT (costo financiero total actualizado) Anualizado</td>
-  									<td class="text-right"><?php echo "$cft"; ?></td>
+  									<td class="text-right"><?php echo "$cft" ."%" ; ?></td>
   								  </tr>
   								</tbody>
                 </table>
