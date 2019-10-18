@@ -100,13 +100,14 @@
 
              $cft = ((($descuento + $gastos + $comision) / $valordelcheque )*10 * 365 / $plazo)*100;
 
-         }
+             $descuento = number_format((float)$descuento, 2, '.', '');
+             $gastos = number_format((float)$gastos, 2, '.', '');
+             $comision = number_format((float)$comision, 2, '.', '');
+             $valorneto = number_format((float)$valorneto, 2, '.', '');
+             $cft = number_format((float)$cft, 2, '.', '');
 
-         $descuento = number_format((float)$descuento, 2, '.', '');
-         $gastos = number_format((float)$gastos, 2, '.', '');
-         $comision = number_format((float)$comision, 2, '.', '');
-         $valorneto = number_format((float)$valorneto, 2, '.', '');
-         $cft = number_format((float)$cft, 2, '.', '');
+
+         }
 
          mysqli_close($conn);
         ?>
