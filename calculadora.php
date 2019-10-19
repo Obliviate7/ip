@@ -52,6 +52,7 @@
              display:block;
           }</style>
           <?php
+          if($_POST){
              //Save the values in variable
              $fechadevenc = $_POST['fechadevenc'];
              $fechadevenc = str_replace('/', '-', $fechadevenc);
@@ -86,30 +87,29 @@
                global $tasa2;
 
                if ($fechadevenc <= $findeano) {
-                   return ($valordelcheque * $tasa1 * $plazo / 365) / 10;
+                   return ($valordelcheque * $tasa1 * $plazo / 365);
                  } else if ($fechadevenc > $findeano){
-                   return ($valordelcheque * $tasa2 * $plazo / 365) / 10;
+                   return ($valordelcheque * $tasa2 * $plazo / 365);
                  }
              };
 
              $descuento = dto();
 
-             $gastos = ((($valordelcheque * $arancel_bolsa * $plazo / 365)/10) + ((($valordelcheque - $descuento * 10)/10) * $arancel_mercado)) * 1.21;
-             $comision = (($valordelcheque * $plazo * $comision_SGR / 365) + ($valordelcheque * 0.002 * 1.21))/10;
-             $valorneto = ((($valordelcheque - $descuento* 10)/10) - $gastos -  $comision);
+             $gastos = ((($valordelcheque * $arancel_bolsa * $plazo / 365)) + ((($valordelcheque - $descuento * 10)) * $arancel_mercado)) * 1.21;
+             $comision = (($valordelcheque * $plazo * $comision_SGR / 365) + ($valordelcheque * 0.002 * 1.21));
+             $valorneto = $valordelcheque-((($valordelcheque - $descuento* 10)/10) - $gastos -  $comision);
 
-             $cft = ((($descuento + $gastos + $comision) / $valordelcheque )*10 * 365 / $plazo)*100;
-
-             $descuento = number_format((float)$descuento, 2, '.', '');
-             $gastos = number_format((float)$gastos, 2, '.', '');
-             $comision = number_format((float)$comision, 2, '.', '');
-             $valorneto = number_format((float)$valorneto, 2, '.', '');
-             $cft = number_format((float)$cft, 2, '.', '');
-
+             $cft = ((($descuento + $gastos + $comision) / $valordelcheque )*10 * 365 / $plazo)*10;
 
          }
 
-         mysqli_close($conn);
+         $descuento = number_format((float)$descuento, 2, '.', '');
+         $gastos = number_format((float)$gastos, 2, '.', '');
+         $comision = number_format((float)$comision, 2, '.', '');
+         $valorneto = number_format((float)$valorneto, 2, '.', '');
+         $cft = number_format((float)$cft, 2, '.', '');
+
+         mysqli_close($conn);}
         ?>
 
 
