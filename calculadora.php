@@ -95,7 +95,7 @@
 
              $descuento = dto();
 
-             $gastos = ((($valordelcheque * $arancel_bolsa * $plazo / 365)) + ((($valordelcheque - $descuento * 10)) * $arancel_mercado)) * 1.21;
+             $gastos = ((($valordelcheque * $arancel_bolsa * $plazo / 365)) + ((($valordelcheque - $descuento * 10)) * $arancel_mercado)) * 1.21*1.12;
              $comision = (($valordelcheque * $plazo * $comision_SGR / 365) + ($valordelcheque * 0.002 * 1.21));
              $valorneto = $valordelcheque-((($valordelcheque - $descuento* 10)/10) - $gastos -  $comision);
 
