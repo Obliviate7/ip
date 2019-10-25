@@ -24,7 +24,7 @@
 
         <div class="home-box col-md-4">
           <a href="sgr.php">
-          <h3>¿Qué es una Sociedad de Garantía Recíproca?</h3>
+          <h3>¿Qué es una SGR?</h3>
           </a>
           <div class="home-box-1">
           </div>
