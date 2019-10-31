@@ -117,29 +117,29 @@
         <div class="col-md-6" id="resultadoscalculadora">
           <div class="calculadora-box calc-2">
             <div class="col-md-12">
-              <table class="table table-bordered table-striped">
+              <table class="valneto table table-bordered table-striped">
 								<tbody>
                  <tr>
 									 <td>Valor Neto</td>
-								   <td class="text-right"><?php echo "$valorneto"; ?></td>
+								   <td class="text-right"><?php echo "$ " . "$valorneto"; ?></td>
 								 </tr>
 							</tbody>
             </table>
               <div class="datosadicionales">
   								<h3>Datos adicionales</h3>
-  							<table>
+  							<table class="table table-bordered table-striped">
   								<tbody>
                     <tr>
     									<td>Descuento</td>
-    									<td class="text-right"><?php echo "$descuento"; ?></td>
+    									<td class="text-right"><?php echo "$ " . "$descuento"; ?></td>
   								  </tr>
     								<tr>
     									<td>Gastos Agente de Bolsa sin IVA</td>
-    									<td class="text-right"><?php echo "$gastos"; ?></td>
+    									<td class="text-right"><?php echo "$ " . "$gastos"; ?></td>
     								</tr>
     								<tr>
     									<td>Comisión SGR ( 3,85% Anual)</td>
-    									<td class="text-right"><?php echo "$comision"; ?></td>
+    									<td class="text-right"><?php echo "$ " . "$comision"; ?></td>
     								</tr>
   									<tr>
   									<td>CFT (costo financiero total actualizado) Anualizado</td>
@@ -150,7 +150,7 @@
   						</div>
             </div>
 <br>
-            <p class="disclosure">No incluye Gastos, Comisiones ni IVA.
+            <p class="disclosure">
             La información contenida en este simulador es de carácter meramente informativo, por lo que no genera obligación de ningún tipo.</p>
           </div>
         </div>

@@ -506,7 +506,7 @@ button {
 }
 .calculadora-box input,.calculadora-box  select {
   border-bottom:solid 3px #ffffff;
-  width: 100%;
+  width: 97%;
   margin-bottom: 25px;
 }
 .calculadora-box h2 {
@@ -630,6 +630,9 @@ url('img/skyscrapers.jpg');
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+}
+.valneto{
+  margin-top: 10px;
 }
 .nosotros .line-badge img{
   height: 90px;
