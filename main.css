@@ -634,6 +634,18 @@ url('img/skyscrapers.jpg');
 .valneto{
   margin-top: 10px;
 }
+.admincontent{
+  margin-top: 150px;
+}
+.admincontent label{
+  text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+}
+.admincontent .form-control{
+  width: 30%;
+}
 .nosotros .line-badge img{
   height: 90px;
   margin-top: 20px;

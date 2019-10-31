@@ -134,15 +134,15 @@
     									<td class="text-right"><?php echo "$ " . "$descuento"; ?></td>
   								  </tr>
     								<tr>
-    									<td>Gastos Agente de Bolsa sin IVA</td>
+    									<td>Gastos Agente de Bolsa</td>
     									<td class="text-right"><?php echo "$ " . "$gastos"; ?></td>
     								</tr>
     								<tr>
-    									<td>Comisión SGR ( 3,85% Anual)</td>
+    									<td>Comisión SGR</td>
     									<td class="text-right"><?php echo "$ " . "$comision"; ?></td>
     								</tr>
   									<tr>
-  									<td>CFT (costo financiero total actualizado) Anualizado</td>
+  									<td>CFT (costo financiero total actualizado)</td>
   									<td class="text-right"><?php echo "$cft" ."%" ; ?></td>
   								  </tr>
   								</tbody>
